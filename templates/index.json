@@ -1,1 +1,83 @@
-{"sections":{"image-with-text":{"type":"image-with-text","blocks":{"heading":{"type":"heading","settings":{"heading":"Our latest","heading_size":"h0"}},"button":{"type":"button","settings":{"button_label":"Shop all","button_link":"shopify:\/\/collections\/all"}}},"block_order":["heading","button"],"settings":{"height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"middle","desktop_content_alignment":"center","content_layout":"no-overlap","color_scheme":"background-1","image_behavior":"none","mobile_content_alignment":"center","padding_top":12,"padding_bottom":32}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":32,"padding_bottom":36}}},"order":["image-with-text","featured_collection"]}
+{
+  "sections": {
+    "47255f19-d8a9-4870-a519-0c161415060a": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"Where do I get one of those cool stickers everyone's talking about?\"",
+            "heading_size": "h2"
+          }
+        },
+        "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-1": {
+          "type": "text",
+          "settings": {
+            "text": "(Right here.)",
+            "text_style": "body"
+          }
+        },
+        "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get a sticker",
+            "button_link_1": "shopify:\/\/products\/posthog-sticker",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-0",
+        "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-1",
+        "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/sticker_collage.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "47255f19-d8a9-4870-a519-0c161415060a",
+    "featured_collection"
+  ]
+}
