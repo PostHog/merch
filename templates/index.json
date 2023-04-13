@@ -13,7 +13,7 @@
         "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-1": {
           "type": "text",
           "settings": {
-            "text": "(Right here.)",
+            "text": "Right here.👇🏼",
             "text_style": "body"
           }
         },
@@ -34,6 +34,9 @@
         "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-1",
         "template--16062604673185__47255f19-d8a9-4870-a519-0c161415060a-1681320091ee30e9d2-2"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/sticker_collage.jpg",
         "image_overlay_opacity": 0,
@@ -41,7 +44,7 @@
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
