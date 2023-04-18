@@ -95,5 +95,16 @@ if (!customElements.get('product-info')) {
   }
 )};
 
+const hidePrintfection = document.querySelector('variant-radios')
 
-
+if (hidePrintfection) {
+  const fieldsets = hidePrintfection.querySelectorAll('fieldset');
+  const sizeInputs = fieldsets[0].querySelectorAll('input');
+  const sizeIDInputs = fieldsets[1].querySelectorAll('input');
+  for (let i = 0; i < sizeInputs.length; i++) {
+      const el = sizeInputs[i];
+      el.addEventListener('change', function () {
+          sizeIDInputs[i].click();
+      })
+  }
+}

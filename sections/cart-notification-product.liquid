@@ -8,8 +8,7 @@
             alt="{{ item.image.alt | escape }}"
             width="70"
             height="{{ 70 | divided_by: item.image.aspect_ratio | ceil }}"
-            loading="lazy"
-          >
+            loading="lazy">
         </div>
       {%- endif -%}
       <div>
@@ -20,7 +19,7 @@
         <dl>
           {%- unless item.product.has_only_default_variant -%}
             {%- for option in item.options_with_values -%}
-              <div class="product-option">
+              <div class="product-option option-{{ option.name | handleize }}">
                 <dt>{{ option.name }}:</dt>
                 <dd>{{ option.value }}</dd>
               </div>
@@ -33,7 +32,10 @@
                 <dt>{{ property.first }}:</dt>
                 <dd>
                   {%- if property.last contains '/uploads/' -%}
-                    <a href="{{ property.last }}" class="link" target="_blank">
+                    <a
+                      href="{{ property.last }}"
+                      class="link"
+                      target="_blank">
                       {{ property.last | split: '/' | last }}
                     </a>
                   {%- else -%}

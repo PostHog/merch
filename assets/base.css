@@ -1,3 +1,13 @@
+.variant-size-id {
+  display: none; /* hide Printfection size hack https://posthog.myshopify.com/admin/orders?inContextTimeframe=last_7_days */
+}
+
+.option-size-id {
+  display: none; /* hide Printfection from cart page and mini-cart */
+}
+
+.
+
 /* Color custom properties */
 
 :root,
