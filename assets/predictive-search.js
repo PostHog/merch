@@ -216,8 +216,11 @@ class PredictiveSearch extends SearchForm {
         this.renderSearchResults(resultsMarkup);
       })
       .catch((error) => {
-        if (error?.code === 20) {
-          // Code 20 means the call was aborted
+        if (error?.code === 20 || error?.name === 'AbortError') {
+          // The request was aborted (e.g. the search was cleared). This is
+          // expected and benign, so swallow it instead of letting it surface
+          // as an uncaught error. error.code === 20 is the legacy check;
+          // error.name === 'AbortError' is the reliable cross-browser check.
           return;
         }
         this.close();
