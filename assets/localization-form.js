@@ -7,6 +7,7 @@ if (!customElements.get('localization-form')) {
         button: this.querySelector('button'),
         panel: this.querySelector('.disclosure__list-wrapper'),
       };
+      if (!this.elements.button) return;
       this.elements.button.addEventListener('click', this.openSelector.bind(this));
       this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
       this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
