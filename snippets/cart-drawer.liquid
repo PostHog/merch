@@ -436,6 +436,15 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    const checkoutButton = document.querySelector('#CartDrawer-Checkout');
+    if (checkoutButton) {
+      checkoutButton.addEventListener('click', function () {
+        if (window.posthog) {
+          window.posthog.capture('checkout_started', { source: 'cart_drawer' });
+        }
+      });
+    }
+
     function isIE() {
       const ua = window.navigator.userAgent;
       const msie = ua.indexOf('MSIE ');
