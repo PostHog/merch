@@ -95,16 +95,41 @@ if (!customElements.get('product-info')) {
   }
 )};
 
-const hidePrintfection = document.querySelector('variant-radios')
+const variantRadios = document.querySelector('variant-radios')
 
-if (hidePrintfection) {
-  const fieldsets = hidePrintfection.querySelectorAll('fieldset');
-  const sizeInputs = fieldsets[0].querySelectorAll('input');
-  const sizeIDInputs = fieldsets[1].querySelectorAll('input');
-  for (let i = 0; i < sizeInputs.length; i++) {
-      const el = sizeInputs[i];
-      el.addEventListener('change', function () {
-          sizeIDInputs[i].click();
-      })
+if (variantRadios) {
+  const fieldsets = Array.from(variantRadios.querySelectorAll('fieldset'));
+  const sizeFieldset = variantRadios.querySelector('.variant-size');
+  const sizeIDFieldset = variantRadios.querySelector('.variant-size-id');
+
+  if (sizeFieldset && sizeIDFieldset) {
+    const sizePosition = fieldsets.indexOf(sizeFieldset);
+    const sizeIDPosition = fieldsets.indexOf(sizeIDFieldset);
+    const variantsScript = variantRadios.querySelector('script[type="application/json"]');
+    const variants = variantsScript ? JSON.parse(variantsScript.textContent) : [];
+
+    // Pair each visible size with its Printfection Size ID from the variant data,
+    // so the ordering of the two option lists does not matter.
+    const sizeIDForSize = {};
+    for (const variant of variants) {
+      sizeIDForSize[variant.options[sizePosition]] = variant.options[sizeIDPosition];
+    }
+
+    const sizeIDInputByValue = {};
+    for (const input of sizeIDFieldset.querySelectorAll('input')) {
+      sizeIDInputByValue[input.value] = input;
+    }
+
+    for (const sizeInput of sizeFieldset.querySelectorAll('input')) {
+      sizeInput.addEventListener('change', function () {
+        const sizeID = sizeIDForSize[sizeInput.value];
+        const target = sizeID == null ? undefined : sizeIDInputByValue[sizeID];
+        if (target) {
+          target.click();
+        } else {
+          console.error(`Printfection: no Size ID matches size "${sizeInput.value}"`);
+        }
+      });
+    }
   }
 }
